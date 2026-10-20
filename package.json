@@ -1,0 +1,25 @@
+{
+  "name": "lab3-service-reliability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lab 3 - Fee Service and simulated Bank Service with timeout, retry, idempotency and keep-alive tests",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "bank": "node bank-service/index.js",
+    "fee": "node fee-service/index.js",
+    "test:s1": "node scripts/test-scenario1.mjs",
+    "test:bank-url": "node scripts/test-bank-url.mjs",
+    "test:s2": "node scripts/test-scenario2.mjs",
+    "test:s3": "node scripts/load-200.mjs",
+    "test:s4": "node scripts/test-scenario4.mjs"
+  },
+  "dependencies": {
+    "agentkeepalive": "^4.6.0",
+    "axios": "^1.8.4",
+    "express": "^4.21.2",
+    "dotenv": "^16.4.7"
+  }
+}
